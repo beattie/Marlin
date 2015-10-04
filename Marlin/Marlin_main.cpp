@@ -1181,6 +1181,21 @@ static void homeaxis(int axis) {
 #define HOMEAXIS_DO(LETTER) \
   ((LETTER##_MIN_PIN > -1 && LETTER##_HOME_DIR==-1) || (LETTER##_MAX_PIN > -1 && LETTER##_HOME_DIR==1))
 
+  SERIAL_ECHO_START;
+  SERIAL_ECHO(__func__);
+  if(axis==X_AXIS) {
+	SERIAL_ECHO(" X_MIN_PIN ");
+	SERIAL_ECHO(X_MIN_PIN);
+  }
+  if(axis==Y_AXIS) {
+	SERIAL_ECHO(" Y_MIN_PIN ");
+	SERIAL_ECHO(Y_MIN_PIN);
+  }
+  if(axis==Z_AXIS) {
+	SERIAL_ECHO(" Z_MIN_PIN ");
+	SERIAL_ECHO(Z_MIN_PIN);
+  }
+  SERIAL_ECHO("\n");
   if (axis==X_AXIS ? HOMEAXIS_DO(X) :
       axis==Y_AXIS ? HOMEAXIS_DO(Y) :
       axis==Z_AXIS ? HOMEAXIS_DO(Z) :

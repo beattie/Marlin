@@ -1,6 +1,9 @@
 # Marlin 3D Printer Firmware
 <img align="right" src="Documentation/Logo/Marlin%20Logo%20GitHub.png" />
 
+## Configured for Quintessential Universal Building Device One-Up
+Configuration items that are not standard One-Up are marked CHECKME
+
 ## Marlin 1.1 Release Candidate is now available
 19 September 2015
 Please see the [RC branch](https://github.com/MarlinFirmware/Marlin/tree/RC) of this repository for access to this new pre-release version of the Marlin firmware.
